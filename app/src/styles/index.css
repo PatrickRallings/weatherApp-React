@@ -32,7 +32,9 @@ body {
   }
   
   hr {
-    margin: 3px;
+    background-color: rgba(255, 255, 255, .35);
+    margin-left: 15%;
+    margin-right: 15%;
   }
   
   input {
@@ -179,7 +181,6 @@ body {
   }
   
   .tempNumCont {
-    width: fit-content;
     margin: 5px;
     border: 2px solid white;
     border-radius: 15px;

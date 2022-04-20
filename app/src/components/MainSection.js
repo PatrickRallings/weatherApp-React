@@ -36,20 +36,17 @@ export default function MainSection() {
         </div>
       </div>
       <div className="row tempCont">
-        <div className="infoCont col-6 tempNumCont">
-          <span className="col">
+        <div className="infoCont col tempNumCont">
+
             <h4>Currently</h4>
             <hr />
-          </span>
-          <span className="col">
             <h2 style={{ fontSize: "50px", marginTop: "7px" }} id="currentTemp">
               70 °
             </h2>
-          </span>
         </div>
-        <div className="infoCont col-6 tempNumCont">
-          <span className="col" style={{ marginTop: "5px" }}>
-            <div className="row" style={{ padding: "10px" }}>
+        <div className="infoCont col tempNumCont">
+          <span className="col">
+            <div className="row">
               <h4 className="col">High</h4>
               <h4 className="col">Low</h4>
               <hr />
