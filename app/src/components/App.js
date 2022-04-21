@@ -13,7 +13,7 @@ export default function App() {
     const loc = document.querySelector("#location");
     const date = document.querySelector("#date");
     const day = document.querySelector("#day");
-    const degreeBtn = document.querySelector("#degreeBtn");
+    const time = document.querySelector('#time')
     
     const currentTemp = document.querySelector("#currentTemp");
     const currentHigh = document.querySelector("#currentHigh");
@@ -49,6 +49,7 @@ export default function App() {
     
     let today = new Date();
     let currentDay = week[today.getDay()];
+    let timeVal = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     let dd = String(today.getDate()).padStart(2, "0");
     let mm = String(today.getMonth() + 1).padStart(2, "0");
     let yyyy = today.getFullYear();
@@ -100,6 +101,7 @@ export default function App() {
       let cityVal = document.querySelector("input").value;
       day.innerHTML = `<em>${currentDay}</em>`;
       date.innerHTML = `<em>${today}</em>`;
+      time.innerHTML = `<em>${timeVal}</em>`;
       if (cityVal === "") {
         linkVal = `q=Charlotte,us`;
       } else if (parseInt(cityVal) === Number) {

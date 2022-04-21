@@ -5,17 +5,24 @@ export default function MainSection() {
     <div className="crd col" id="appBottom">
       <div id="appHead">
         <div className="col" id="dateDiv">
+        <span
+            className="row"
+            id="date"
+            style={{ fontSize: "small", marginLeft: "3px" }} >
+        
+            </span>
           <span
             className="row"
             id="day"
-          >
-            day
-          </span>
-          <span
+            style={{ fontSize: "small", marginLeft: "3px" }} >
+        
+            </span>
+            <span
             className="row"
-            id="date"
-            style={{ fontSize: "small", marginLeft: "3px" }}
-          />
+            id="time"
+            style={{ fontSize: "small", marginLeft: "3px" }} >
+        
+            </span>
         </div>
         <div className="col">
           <span id="location" style={{ fontSize: "40px" }}>
@@ -61,8 +68,9 @@ export default function MainSection() {
           </span>
         </div>
       </div>
-      <div className="row tempExtraCont">
-        <div className="infoCont col-4 tempExtraNumCont">
+      {/* End of first data row */}
+      <div className="tempExtraCont">
+        <div className="infoCont col tempExtraNumCont">
           <span className="col" style={{ marginTop: "5px" }}>
             <h5 className>Condition</h5>
             <hr />
@@ -81,7 +89,7 @@ export default function MainSection() {
             <em />
           </p>
         </div>
-        <div className="infoCont col-4 tempExtraNumCont">
+        <div className="infoCont col tempExtraNumCont">
           <span className="col" style={{ marginTop: "5px" }}>
             <h5>Humidity</h5>
             <hr />
@@ -90,7 +98,7 @@ export default function MainSection() {
             <h2 id="humidity">10%</h2>
           </span>
         </div>
-        <div className="infoCont col-4 tempExtraNumCont">
+        <div className="infoCont col tempExtraNumCont">
           <span className="col" style={{ marginTop: "5px" }}>
             <h5>Feels Like</h5>
             <hr />
@@ -100,6 +108,7 @@ export default function MainSection() {
           </span>
         </div>
       </div>
+      {/* End of second data container */}
       <div
         id="appHead"
         style={{
@@ -110,8 +119,9 @@ export default function MainSection() {
       >
         <span style={{ fontSize: "30px" }}>Three Day Forecast</span>
       </div>
-      <div className="row tempExtraCont">
-        <div className="infoCont col-4 tempExtraNumCont">
+      {/* End of forecast header */}
+      <div className="tempExtraCont">
+        <div className="infoCont col tempExtraNumCont">
           <span className="col" style={{ marginTop: "5px" }}>
             <h5 id="day1Date">Day 1</h5>
             <hr />
@@ -137,7 +147,7 @@ export default function MainSection() {
             <em />
           </p>
         </div>
-        <div className="infoCont col-4 tempExtraNumCont">
+        <div className="infoCont col tempExtraNumCont">
           <span className="col" style={{ marginTop: "5px" }}>
             <h5 id="day2Date">Day 2</h5>
             <hr />
@@ -163,7 +173,7 @@ export default function MainSection() {
             <em />
           </p>
         </div>
-        <div className="infoCont col-4 tempExtraNumCont">
+        <div className="infoCont col tempExtraNumCont">
           <span className="col" style={{ marginTop: "5px" }}>
             <h5 id="day3Date">Day 3</h5>
             <hr />
@@ -190,6 +200,7 @@ export default function MainSection() {
           </span>
         </div>
       </div>
+      {/* End of forecast container */}
     </div>
   );
 }
