@@ -1,5 +1,4 @@
-import React from "react";
-import { useEffect } from "react";
+import React, {useEffect} from "react";
 import TopSection from "./TopSection";
 import MainSection from "./MainSection";
 
@@ -53,10 +52,18 @@ export default function App() {
     let dd = String(today.getDate()).padStart(2, "0");
     let mm = String(today.getMonth() + 1).padStart(2, "0");
     let yyyy = today.getFullYear();
+
+    const setFutureDay = (todayIndex, daysInFuture) => {
+        if (todayIndex + daysInFuture > week.length - 1) {
+            return week[(todayIndex + daysInFuture) - week.length];
+        } else {
+            return week[todayIndex + daysInFuture];
+        }
+    }
     
-    let day1Day = week[today.getDay() + 1];
-    let day2Day = week[today.getDay() + 2];
-    let day3Day = week[today.getDay() + 3];
+    let day1Day = setFutureDay(today.getDay(), 1);
+    let day2Day = setFutureDay(today.getDay(), 2);
+    let day3Day = setFutureDay(today.getDay(), 3);
     
     today = mm + "/" + dd + "/" + yyyy;
     
